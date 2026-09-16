@@ -23,7 +23,7 @@ export async function createRun(input: NewRunInput): Promise<CreateRunResponse> 
   });
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
-    throw new Error(body.detail ?? `Failed to start run (${res.status})`);
+    throw new Error(body.detail ?? `Couldn't start the screening (error ${res.status}).`);
   }
   return res.json();
 }

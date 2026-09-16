@@ -39,8 +39,8 @@ export function CandidateDetailSheet({ candidate, onOpenChange }: CandidateDetai
             <div className="space-y-4 px-4 pb-4">
               <div className="flex items-start gap-2 rounded-md border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-400">
                 <ShieldCheck className="h-4 w-4 shrink-0" />
-                Name, contact info, age, and other protected attributes were redacted before this
-                resume was ever seen by the AI.
+                Name, contact details, age, and other personal information were removed before
+                this resume was reviewed by the AI.
               </div>
 
               {candidate.flags.length > 0 && (
@@ -80,7 +80,7 @@ export function CandidateDetailSheet({ candidate, onOpenChange }: CandidateDetai
                       </TableCell>
                       <TableCell className="text-sm text-muted-foreground">
                         {s.evidence === "none" ? (
-                          <span className="italic">no evidence</span>
+                          <span className="italic">No evidence found</span>
                         ) : (
                           `"${s.evidence}"`
                         )}

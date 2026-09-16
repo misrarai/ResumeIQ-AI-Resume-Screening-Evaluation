@@ -103,7 +103,7 @@ export function useRunStream(runId: string | null) {
     });
 
     source.addEventListener("error", (e) => {
-      let message = "Connection to the server was lost.";
+      let message = "We lost connection to the server. Please try again.";
       const raw = (e as MessageEvent).data;
       if (raw) {
         try {

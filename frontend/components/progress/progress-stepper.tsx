@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 import type { RunPhase } from "@/hooks/useRunStream";
 
 const STEPS: { phase: RunPhase; label: string }[] = [
-  { phase: "building_rubric", label: "Building rubric" },
-  { phase: "redacting", label: "Redacting PII" },
+  { phase: "building_rubric", label: "Building scoring rubric" },
+  { phase: "redacting", label: "Removing personal details" },
   { phase: "scoring", label: "Scoring candidates" },
-  { phase: "writing_report", label: "Ranking & writing report" },
+  { phase: "writing_report", label: "Ranking and writing report" },
 ];
 
 const ORDER: RunPhase[] = [

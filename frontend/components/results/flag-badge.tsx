@@ -2,17 +2,17 @@ import { AlertTriangle, ShieldAlert, FileWarning } from "lucide-react";
 
 const FLAG_META: Record<string, { label: string; icon: React.ElementType; classes: string }> = {
   injection_suspected: {
-    label: "Injection attempt",
+    label: "Possible manipulation attempt",
     icon: ShieldAlert,
     classes: "bg-rose-500/15 text-rose-400",
   },
   unreadable: {
-    label: "Unreadable resume",
+    label: "Resume could not be read",
     icon: FileWarning,
     classes: "bg-secondary text-muted-foreground",
   },
   bias_filter_triggered: {
-    label: "Bias filter triggered",
+    label: "Bias filter applied",
     icon: AlertTriangle,
     classes: "bg-amber-500/15 text-amber-400",
   },

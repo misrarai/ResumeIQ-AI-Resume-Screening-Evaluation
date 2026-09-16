@@ -15,7 +15,7 @@ export function CandidateProgressGrid({ candidateIds, scored }: CandidateProgres
       <h3 className="mb-3 text-sm font-semibold text-foreground">
         Scoring candidates in parallel &middot;{" "}
         <span className="text-primary">
-          {Object.keys(scored).length}/{candidateIds.length} done
+          {Object.keys(scored).length} of {candidateIds.length} scored
         </span>
       </h3>
       <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">

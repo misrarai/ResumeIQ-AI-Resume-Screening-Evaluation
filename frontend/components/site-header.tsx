@@ -14,7 +14,7 @@ export function SiteHeader() {
           </span>
         </Link>
         <span className="hidden items-center gap-1.5 rounded-full border border-white/10 bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground sm:flex">
-          <Sparkles className="h-3.5 w-3.5 text-primary" /> AI-assisted screening
+          <Sparkles className="h-3.5 w-3.5 text-primary" /> AI-Powered Screening
         </span>
       </div>
     </header>

@@ -45,9 +45,9 @@ export function ResumeDropzone({ files, onChange }: ResumeDropzoneProps) {
         <input {...getInputProps()} />
         <UploadCloud className="h-8 w-8 text-muted-foreground" />
         <p className="text-sm font-semibold text-foreground">
-          {isDragActive ? "Drop resumes here" : "Drag & drop resumes here, or click to browse"}
+          {isDragActive ? "Drop your resumes here" : "Drag and drop resumes here, or click to browse"}
         </p>
-        <p className="text-xs text-muted-foreground">Accepts .pdf and .txt files &middot; multiple files supported</p>
+        <p className="text-xs text-muted-foreground">Accepts PDF and TXT files &middot; upload as many resumes as you need</p>
       </div>
 
       {files.length > 0 && (

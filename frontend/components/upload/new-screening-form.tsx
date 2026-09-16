@@ -42,7 +42,7 @@ export function NewScreeningForm() {
       }
       router.push(`/runs/${run_id}`);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Failed to start screening.");
+      toast.error(err instanceof Error ? err.message : "Couldn't start the screening. Please try again.");
       setSubmitting(false);
     }
   }
@@ -53,7 +53,7 @@ export function NewScreeningForm() {
         step={1}
         icon={FileText}
         title="Job description"
-        description="Write or paste the role's text below."
+        description="Paste or write the description for the role you're hiring for."
       >
         <JdInput jdText={jdText} onTextChange={setJdText} />
       </FormSection>
@@ -62,7 +62,7 @@ export function NewScreeningForm() {
         step={2}
         icon={Users}
         title="Resumes"
-        description="Drag and drop every candidate's resume you want screened."
+        description="Drag and drop the resumes you'd like to screen."
       >
         <ResumeDropzone files={resumes} onChange={setResumes} />
       </FormSection>
@@ -71,7 +71,7 @@ export function NewScreeningForm() {
         step={3}
         icon={Sliders}
         title="Shortlist size"
-        description="How many top candidates to include in the final report. Defaults to the number of resumes uploaded — edit it any time."
+        description="How many top candidates to include in your final report. This defaults to the number of resumes you upload, but you can change it anytime."
       >
         <div className="flex items-center gap-3">
           <Label htmlFor="top-n" className="sr-only">
@@ -90,7 +90,7 @@ export function NewScreeningForm() {
             className="w-24"
           />
           <span className="text-sm text-muted-foreground">
-            candidates{resumes.length > 0 && ` (of ${resumes.length} uploaded)`}
+            candidates{resumes.length > 0 && ` (from ${resumes.length} uploaded)`}
           </span>
         </div>
       </FormSection>
@@ -103,11 +103,11 @@ export function NewScreeningForm() {
       >
         {submitting ? (
           <>
-            <Loader2 className="h-4 w-4 animate-spin" /> Starting screening...
+            <Loader2 className="h-4 w-4 animate-spin" /> Starting Screening…
           </>
         ) : (
           <>
-            <ScanSearch className="h-4 w-4" /> Start screening
+            <ScanSearch className="h-4 w-4" /> Start Screening
           </>
         )}
       </Button>

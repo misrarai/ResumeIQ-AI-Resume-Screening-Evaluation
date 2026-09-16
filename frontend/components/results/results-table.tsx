@@ -60,7 +60,7 @@ export function ResultsTable({ shortlist, onSelect }: ResultsTableProps) {
         header: "Weighted total",
         cell: (c) => <span className="font-bold text-primary">{c.getValue()}</span>,
       }),
-      columnHelper.accessor("evidence_count", { header: "Criteria with evidence" }),
+      columnHelper.accessor("evidence_count", { header: "Criteria backed by evidence" }),
       columnHelper.accessor("flags", {
         header: "Flags",
         cell: (c) => (
@@ -122,7 +122,7 @@ export function ResultsTable({ shortlist, onSelect }: ResultsTableProps) {
         </TableBody>
       </Table>
       {shortlist.length === 0 && (
-        <div className="p-6 text-center text-sm text-muted-foreground">No candidates in the shortlist.</div>
+        <div className="p-6 text-center text-sm text-muted-foreground">No candidates in this shortlist yet.</div>
       )}
     </div>
   );

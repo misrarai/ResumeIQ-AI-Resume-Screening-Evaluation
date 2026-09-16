@@ -32,13 +32,13 @@ export default function RunPage({ params }: { params: Promise<{ runId: string }>
   const candidateIds = useCandidateIds(runId);
 
   if (initialQuery.isLoading) {
-    return <PageShell>Loading run…</PageShell>;
+    return <PageShell>Loading your results…</PageShell>;
   }
 
   if (initialQuery.data?.status === "error") {
     return (
       <PageShell>
-        <ErrorCard message={initialQuery.data.message ?? "The run failed."} />
+        <ErrorCard message={initialQuery.data.message ?? "Something went wrong during this screening."} />
       </PageShell>
     );
   }
@@ -76,7 +76,7 @@ export default function RunPage({ params }: { params: Promise<{ runId: string }>
 
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h2 className="text-lg font-bold tracking-tight text-foreground">
-              Ranked <span className="text-primary">shortlist</span>
+              Ranked <span className="text-primary">Shortlist</span>
             </h2>
             <ReportDownloadButtons runId={runId} />
           </div>
