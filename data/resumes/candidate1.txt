@@ -1,0 +1,4 @@
+Name: Ali Raza
+6 years Python backend development. Built REST APIs with Django and FastAPI.
+Deep PostgreSQL experience, managed Docker and Kubernetes deployments on AWS.
+Led a team of 4 engineers for 2 years.

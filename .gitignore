@@ -1,0 +1,25 @@
+# --- Python (agent.py CLI + backend) ---
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# --- Frontend (Next.js) ---
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# --- Generated report output ---
+shortlist_report.md
+shortlist_report_*.md
+shortlist_report_*.pdf
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

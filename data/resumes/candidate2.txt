@@ -1,0 +1,3 @@
+Name: Sara Khan
+1 year experience, mostly frontend JavaScript. Basic Python scripting knowledge.
+No experience with PostgreSQL, Docker, or AWS.
